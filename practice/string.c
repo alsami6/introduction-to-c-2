@@ -1,19 +1,12 @@
 #include<stdio.h>
 
 int main(){
-    // char str[200];
-
-    // scanf("%[^\n]s", str);
-
-    // fgets(str, sizeof(str), stdin);
-
-    // fputs(str, stdout);
-    
-
-    char str[] = "Bangladesh is a \"beau\0tiful\" country";
-
-    puts(str);
-
+    char arr[] = "with in 3 years will get the job\0";
+    int i = 0;
+    while(arr[i] != '\0'){
+        printf("%c", arr[i]);
+        i++;
+    }
 
     return 0;
 }

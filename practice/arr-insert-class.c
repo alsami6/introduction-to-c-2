@@ -1,28 +1,30 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int a[1000000];
+int a[100000];
 
-int main()
-{
+int main(){
     int length;
     scanf("%d", &length);
-
+    
     for(int i = 0; i < length; i++){
         scanf("%d", &a[i]);
     }
 
-    int index;
-    scanf("%d", &index);
+    int index, value;
+    scanf("%d %d", &index, &value);
 
-    for(int i = index; i < length; i++){
-        a[i] = a[i + 1];
+    length++;
+
+    for(int i = length; i > index; i--){
+        a[i + 1] = a[i];
     }
 
-    length--;
+    a[index] = value;
 
     for(int i = 0; i < length; i++){
         printf("%d ", a[i]);
     }
+
 
     return 0;
 }

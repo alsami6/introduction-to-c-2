@@ -1,34 +1,31 @@
 #include <stdio.h>
 
-int a[1000000];
+int a[100000];
 
 int main()
 {
+    int length;
+    scanf("%d", &length);
 
-    int len;
-    scanf("%d", &len);
-
-    for (int i = 0; i < len; i++)
-    {
+    for(int i = 0; i < length; i++){
         scanf("%d", &a[i]);
     }
 
-    int index, value;
+    int index,value;
     scanf("%d %d", &index, &value);
+    length++;
 
-    len++;
-    for (int i = len; i > index; i--)
-    {
+    for(int i = length; i > index; i--){
         a[i] = a[i - 1];
     }
 
-    a[index] = value;
+    a[index]=value;
 
-    for (int i = 0; i < len; i++)
-    {
+    for(int i = 0; i < length; i++){
         printf("%d ", a[i]);
     }
 
+    
     return 0;
 }
 //  0 1 2 3 4 index
