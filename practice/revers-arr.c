@@ -1,30 +1,27 @@
 #include<stdio.h>
 
 int a[100000];
-int b[100000];
+// int b[100000];
 
 
 int main(){
-    int len;
-    scanf("%d", &len);
+    int n;
+    scanf("%d", &n);
 
-    for(int i = 0; i < len; i++){
+    for(int i = 0; i < n; i++){
         scanf("%d", &a[i]);
     }
 
-    for(int i = 0, j = len - 1 ; i < len; i++, j--){
-        b[j]= a[i];
+    for(int i = 0, j = n-1; i <= j; i++, j--){
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 
-    for(int i = 0; i < len; i++){
+    for(int i = 0 ; i < n; i++){
         printf("%d ", a[i]);
     }
 
-    printf("\n");
-
-    for(int i = 0; i < len; i++){
-        printf("%d ", b[i]);
-    }
 
     return 0;
 }
