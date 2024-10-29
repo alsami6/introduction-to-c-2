@@ -1,14 +1,10 @@
 #include<stdio.h>
-
-int a[100000];
-// int b[100000];
-
+#include<string.h>
 
 int main(){
     int n;
     scanf("%d", &n);
-
-    
+    char str[n];
 
 
     return 0;
