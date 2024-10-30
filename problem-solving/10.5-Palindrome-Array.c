@@ -16,7 +16,7 @@ int main(){
     for(int i = 0, j = n - 1; i <= j; i++, j--){
         if(a[i] != a[j]){
             pal = 0;
-            break;
+            break;  
         }
         else{
             break;
