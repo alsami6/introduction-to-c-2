@@ -37,7 +37,7 @@ int main(){
     }
 
     if(flag == 1){
-        printf("Scaller");
+        printf("Scaller");  
     }
     else{
         printf("Not Scaller");
