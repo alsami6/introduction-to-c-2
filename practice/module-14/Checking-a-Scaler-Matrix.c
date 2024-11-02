@@ -1,11 +1,10 @@
 #include<stdio.h>
 
 int main(){
-
     int n;
     scanf("%d", &n);
-    int m[n][n];
 
+    int m[n][n];
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
@@ -22,7 +21,7 @@ int main(){
                 if(m[i][j] != element){
                     flag = 0;
                     break;
-                } 
+                }
             }
             else{
                 if(m[i][j] != 0){
@@ -36,10 +35,10 @@ int main(){
         }
     }
 
+
     if(flag == 1){
-        printf("Scaller");  
-    }
-    else{
+        printf("Scaller");
+    }else{
         printf("Not Scaller");
     }
 

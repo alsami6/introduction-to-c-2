@@ -2,28 +2,21 @@
 #include<string.h>
 
 int main(){
-    char str[10] = "apple";
+    int n, m;
+    scanf("%d %d", &n, &m);
 
-    int f [26] = {0};
+    int a[n];
+    int f[100005]={0};
 
-    int len = strlen(str);
-
-    for(int i = 0; i < len; i++){
-        char ch = str[i];
-        int index = ch - 'a';
-        f[index] = 1;
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]); 
+        f[a[i]] += 1;
     }
 
 
-    int cnt = 0;
-
-    for(int i = 0; i < 26; i++){
-        // printf("%d ", f[i]);
-        cnt += f[i];
+    for(int i = 1; i <= m; i++){
+        printf("%d\n", f[i]);
     }
-
-    printf("%d\n", cnt);
-
 
     return 0;
 }
