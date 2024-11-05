@@ -1,8 +1,11 @@
 #include<stdio.h>
 
-int main(){
+void add(){
     
+}
 
+int main(){
+    add();
 
 
     return 0;
